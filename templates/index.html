@@ -86,8 +86,8 @@
   <ol class="carousel-indicators">
     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
     <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
     <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
   </ol>
   <div class="carousel-inner" role="listbox" >
     <div class="carousel-item active" dir-paginate="value in data | itemsPerPage:1" total-items="count">
@@ -117,7 +117,7 @@
   <div class="card-block">
     <p class="card-title">{{ value.title_plain }}</>
     <p class="card-text">{{ value.custom_fields[0].bs_subtitle | limitTo: 200 }}</p>
-      <button data-toggle="modal" ng-click="edit(value.id)" data-target="#edit-data" class="btn btn-primary">Edit</button>
+      <a href="http://localhost/selintas_new/selintas/#!/detail/{{ value.id }}" class="btn btn-primary">Edit</a>
   </div>
 </div>
   </div>

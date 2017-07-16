@@ -15,7 +15,7 @@ app.controller('ItemController', function(dataFactory,$scope,$http, $routeParams
   getResultsPage(1);
   function getResultsPage(pageNumber) {
       if(! $.isEmptyObject($scope.libraryTemp)){
-          
+
           dataFactory.httpRequest('http://selintasolahraga.com/?json=get_recent_posts').then(function(data) {
             $scope.data = data.posts;
             $scope.data = data.thumbnail_images;   
