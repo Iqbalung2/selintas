@@ -59,20 +59,20 @@
 
   <div id="dw-1" class="bmd-layout-drawer bg-faded">
     <header>
-      <a class="navbar-brand">Title</a>
+      <a class="navbar-brand">Selintas</a>
     </header>
     <ul class="list-group">
       <a class="list-group-item">
         <i class="material-icons" role="presentation">home</i>Home
       </a>
       <a class="list-group-item">
-        <i class="material-icons" role="presentation">inbox</i>Popular
+        <i class="material-icons" role="presentation">thumb_up</i>Popular
       </a>
       <a class="list-group-item">
-        <i class="material-icons" role="presentation">delete</i>Video
+        <i class="material-icons" role="presentation">video_library</i>Video
       </a>
        <a class="list-group-item">
-        <i class="material-icons" role="presentation">delete</i>Score
+        <i class="material-icons" role="presentation">assessment</i>Score
       </a>
 
       <li class="bmd-layout-spacer"></li>
@@ -91,12 +91,36 @@
   </ol>
   <div class="carousel-inner" role="listbox" >
     <div class="carousel-item active" dir-paginate="value in data | itemsPerPage:1" total-items="count">
+      <div class="carousel-caption">
+        <h3>
+          
+        </h3>
+        <p>
+          {{value.title}}
+        </p>
+      </div>
       <img ng-src="{{value.thumbnail_images.medium_large.url}}" alt="First slide">
     </div>
     <div class="carousel-item" dir-paginate="value in data | itemsPerPage:4" total-items="count">
       <img src="{{value.thumbnail_images.medium_large.url}}" alt="Second slide">
+       <div class="carousel-caption">
+        <h3>
+          
+        </h3>
+        <p>
+          {{value.title}}
+        </p>
+      </div>
     </div>
     <div class="carousel-item">
+    <div class="carousel-caption">
+        <h3>
+          
+        </h3>
+        <p>
+          {{value.title}}
+        </p>
+      </div>
       <img src="{{value.thumbnail_images.medium_large.url}}" alt="Third slide">
     </div>
   </div>
@@ -117,7 +141,7 @@
   <div class="card-block">
     <p class="card-title">{{ value.title_plain }}</>
     <p class="card-text">{{ value.custom_fields[0].bs_subtitle | limitTo: 200 }}</p>
-      <a href="http://localhost/selintas_new/selintas/#!/detail/{{ value.id }}" class="btn btn-primary">Edit</a>
+      <a href="http://localhost/selintas_new/selintas/#!/detail/{{ value.id }}" class="btn btn-primary">Read More</a>
   </div>
 </div>
   </div>
